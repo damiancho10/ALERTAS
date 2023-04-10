@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+       
+    <button class="alertapepe" onclick="damian()">Activate </button>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <button class="alertapepe" onclick="elpepe()">Nombre</button>
+
+    <button class="alertapepe" onclick="pepapig()"> Prueba 2</button>
+</center>
+
+
+    <script type="text/javascript">
+        function damian(){
+             
+Swal.fire({
+  icon: 'error',
+  title: 'Lo siento...',
+  text: 'Informacion invalida!',
+  footer: '<a href="">Why do I have this issue?</a>'
+})
+      }
+
+
+         </script>
+
+
+
+         <script type="text/javascript">
+            function elpepe(){
+                Swal.fire({
+  title: 'INGRESA TU NOMBRE',
+  input: 'text',
+  inputAttributes: {
+    autocapitalize: 'off'
+  },
+  showCancelButton: true,
+  confirmButtonText: 'bien',
+  showLoaderOnConfirm: true,
+  preConfirm: (login) => {
+    return fetch(`//api.github.com/users/${login}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+        return response.json()
+      })
+      .catch(error => {
+        Swal.showValidationMessage(
+          `Request failed: ${error}`
+        )
+      })
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: `${result.value.login}'s avatar`,
+      imageUrl: result.value.avatar_url
+    })
+  }
+})
+   
+
+    
+   }
+        </script>
+        <script type="text/javascript">
+            function pepapig(){
+                Swal.fire({
+  title: 'Sweet!',
+  text: 'Modal with a custom image.',
+  imageUrl: 'https://unsplash.it/400/200',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Custom image',
+})
+
+
+
+
+            }
+        </script>
+
+
+    
+    
+</body>
+</html>

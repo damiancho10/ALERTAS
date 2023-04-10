@@ -1,0 +1,18 @@
+body{
+    background-color: papayawhip;
+}
+body{
+    background-image: url(tanjiro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.alertapepe{
+    font-size:10px;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        color:white;
+        background:#057bf1;
+        border:0px;
+        width:70px;
+        height:30px;
+       }
