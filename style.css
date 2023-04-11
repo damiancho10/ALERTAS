@@ -2,7 +2,7 @@ body{
     background-color: papayawhip;
 }
 body{
-    background-image: url(tanjiro.jpg);
+    background-image: url(44121364-resumen-3d-de-líneas-negras-fondo-oscuro-con-forma-futurista.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -16,3 +16,41 @@ body{
         width:70px;
         height:30px;
        }
+
+.alertapepe{
+    background-color: papayawhip;
+    color: black;
+    padding: 30px 199px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+ :hover.alertapepe{
+    background-color: pink;
+    color: rgb(39, 49, 56);
+
+}
+.tiempo{
+    background-color: pink;
+    color: white;
+}
+.pepesss{
+    background-color: papayawhip;
+    color: black;
+    padding: 30px 40px;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 100;
+    left: 100px;
+    
+}
+:hover .pepesss{
+    color: black;
+    background-color: pink;
+    
+}
